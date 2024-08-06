@@ -1,0 +1,28 @@
+{
+	"name": "trg_storage_event",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "trg_ingest-schedule",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"p_data": "2024-08-06"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/stage/blobs/events",
+			"blobPathEndsWith": "product.txt",
+			"ignoreEmptyBlobs": false,
+			"scope": "/subscriptions/1969511a-1512-4742-afc4-b07674148728/resourceGroups/rg-cursoudemy/providers/Microsoft.Storage/storageAccounts/sacursoudemy",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

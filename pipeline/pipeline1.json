@@ -1,0 +1,33 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "now",
+					"value": {
+						"value": "@utcnow('yyyy-MM-dd')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"now": {
+				"type": "String",
+				"defaultValue": "1900-01-01"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-08-01T18:43:15Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

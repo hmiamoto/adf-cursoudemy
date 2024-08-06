@@ -1,0 +1,9 @@
+{
+	"name": "adf-hmcurso",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f48aa086-e7a2-43dd-a997-7d3016257581",
+		"tenantId": "f21c8637-aeb0-452c-8239-3fc0fcbd8fc8"
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "ls_sql_udemy_curso",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "server-udemy-curso.database.windows.net",
+			"database": "db-curso-udemy",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "hmiamoto",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_akv",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "pwd-sqldb-curso-udemy"
+			}
+		}
+	}
+}
